@@ -2,15 +2,15 @@ midwest_data <- midwest
 library("leaflet")
 
 page_one <- tabPanel(
-  "Histogram on Statewide Averages",
-  titlePanel("Midwest Data"),
-  
-  
+  "Statewide Averages",
+  titlePanel("Histogram on Statewide Averages"),
+
+
   sidebarLayout(
     sidebarPanel(
       selectInput(
         inputId = "analysis_var",
-        label = "Level of Analysis",
+        label = "X Axis Variable",
         choices = list(
           "Population Density" = "popdensity",
           "Percent Below Poverty" = "percbelowpoverty",
@@ -24,8 +24,8 @@ page_one <- tabPanel(
         choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
       )
     ),
-    
-    
+
+
     mainPanel(
       plotlyOutput("chart")
     )
@@ -33,8 +33,8 @@ page_one <- tabPanel(
 )
 
 page_two <- tabPanel(
-  "Scatter Plot on Counties in Each State",
-  titlePanel("Midwest Data"),
+  "Counties in Each State",
+  titlePanel("Scatterplot with Points Representing Counties in Each State"),
 
   sidebarLayout(
     sidebarPanel(
@@ -46,14 +46,16 @@ page_two <- tabPanel(
       selectInput(
         inputId = "point_type",
         label = "Type of Point",
-        choices = list( "Circular Point" = 19,
-                       "Triangle Up" = 24,
-                       "Triangle Down" = 25,
-                       "Diamond" = 18)
+        choices = list(
+          "Circular Point" = 19,
+          "Triangle Up" = 24,
+          "Triangle Down" = 25,
+          "Diamond" = 18
+        )
       )
     ),
-    
-    
+
+
     mainPanel(
       plotOutput("scatter")
     )
@@ -61,8 +63,14 @@ page_two <- tabPanel(
 )
 
 
-ui <- navbarPage(
-  "My application",
-  page_one,
-  page_two
+ui <- tagList(
+  tags$head(tags$link(
+    rel = "stylesheet",
+    type = "text/css", href = "styles.css"
+  )),
+  navbarPage(
+    "Midwest Data Report",
+    page_one,
+    page_two
+  )
 )

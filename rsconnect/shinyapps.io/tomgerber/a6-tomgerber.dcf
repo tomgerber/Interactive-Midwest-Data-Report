@@ -5,8 +5,8 @@ account: tomgerber
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 1927286
-bundleId: 2866481
+bundleId: 2866593
 url: https://tomgerber.shinyapps.io/a6-tomgerber/
-when: 1583811702.80362
+when: 1583814705.22777
 asMultiple: FALSE
 asStatic: FALSE

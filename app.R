@@ -10,4 +10,3 @@ midwest %>% pull(state)
 midwest_data <- midwest
 
 shinyApp(ui = ui, server = server)
-

@@ -13,4 +13,3 @@ server <- function(input, output) {
     return(scatter_plot(midwest_data, input$which_state, input$point_type))
   })
 }
- 
