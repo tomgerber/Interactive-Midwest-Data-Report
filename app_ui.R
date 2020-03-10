@@ -2,7 +2,7 @@ midwest_data <- midwest
 library("leaflet")
 
 page_one <- tabPanel(
-  "First Page",
+  "Histogram on Statewide Averages",
   titlePanel("Midwest Data"),
   
   
@@ -11,7 +11,12 @@ page_one <- tabPanel(
       selectInput(
         inputId = "analysis_var",
         label = "Level of Analysis",
-        choices = c("popdensity", "percbelowpoverty")
+        choices = list(
+          "Population Density" = "popdensity",
+          "Percent Below Poverty" = "percbelowpoverty",
+          "Percent of White Population" = "percwhite",
+          "Percent of Black Population" = "percblack"
+        )
       ),
       radioButtons(
         inputId = "color",
@@ -28,7 +33,7 @@ page_one <- tabPanel(
 )
 
 page_two <- tabPanel(
-  "Second Page",
+  "Scatter Plot on Counties in Each State",
   titlePanel("Midwest Data"),
 
   sidebarLayout(

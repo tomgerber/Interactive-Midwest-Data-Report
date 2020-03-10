@@ -1,0 +1,12 @@
+name: a6-tomgerber
+title: a6-tomgerber
+username:
+account: tomgerber
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1927286
+bundleId: 2866481
+url: https://tomgerber.shinyapps.io/a6-tomgerber/
+when: 1583811702.80362
+asMultiple: FALSE
+asStatic: FALSE
