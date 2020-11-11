@@ -1,5 +1,3 @@
-midwest_data <- midwest
-library("leaflet")
 
 page_one <- tabPanel(
   "Statewide Averages",
