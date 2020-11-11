@@ -1,4 +1,4 @@
-# a6-shiny
+# Midwestern Data Report
 
 [Click here to view hosted report.](https://tomgerber.shinyapps.io/a6-tomgerber/)
 
